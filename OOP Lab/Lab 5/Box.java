@@ -30,7 +30,7 @@ public class Box {
         double length = sc.nextDouble();
         System.out.println("Enter width of box: ");
         double width = sc.nextDouble();
-        System.out.println("Enter length of box: ");
+        System.out.println("Enter height of box: ");
         double height = sc.nextDouble();
         Box myBox = new Box();
         myBox.init(length, width, height);
