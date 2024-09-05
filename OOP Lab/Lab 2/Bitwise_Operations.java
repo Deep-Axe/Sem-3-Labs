@@ -12,8 +12,6 @@ public class Bitwise_Operations {
         System.out.println("Integer division by two using bitwise: "+x_bytwo);
         System.out.println("Multiplication by two using bitwise: "+two_x);;
 
-
-
         sc.close();
     }
 }
