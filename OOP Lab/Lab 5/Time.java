@@ -41,7 +41,7 @@ public class Time {
         Time[] times = new Time[numberOfTimes];
 
         for (int i = 0; i < numberOfTimes; i++) {
-            System.out.println("Enter hours for time: " +( i + 1));
+            System.out.println("Enter hours for time " +( i + 1));
             int hours = sc.nextInt();
             System.out.println("Enter minutes for time "+ (i + 1));
             int minutes = sc.nextInt();
