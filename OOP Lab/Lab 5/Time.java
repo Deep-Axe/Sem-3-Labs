@@ -1,4 +1,4 @@
-ifimport java.util.Scanner;
+import java.util.Scanner;
 
 public class Time {
     private int hours;
