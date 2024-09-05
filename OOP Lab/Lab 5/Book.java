@@ -1,54 +1,73 @@
 import java.util.Scanner;
-class Book{
-    String  title;
-    String author;
-    int edition;
-    Book(String title,String auth,int edit )
-    {
-        this.title=title;
-        this.author=auth;
-        this.edition=edit;
+
+
+class Book {
+    private String title;
+    private String author;
+    private int edition;
+
+    
+    public Book(String title, String author, int edition) {
+        this.title = title;
+        this.author = author;
+        this.edition = edition;
     }
-    void display()
-    {
-        System.out.println("Title:"+title);
-        System.out.println("Author:"+author);
-        System.out.println("Edition:"+edition+"\n");
+
+   
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    
+    public void display() {
+        System.out.println("Title: " + title + ", Author: " + author + ", Edition: " + edition);
     }
 }
 
-class bookmain
-{
-    public static void main(String[] args)
-    {
-        Scanner in = new Scanner(System.in);
+
+public class BookManager {
+    public static void main(String[] args) {
         
-        String  title;
-        String author;
-        int edition,i;        
-        Book arr[]=new Book[6];           
-        for(i = 0; i < 6; i++)              
-        {
-            System.out.println("Enter the details of book "+(i+1));
-            System.out.println("Enter the title:");
-            title=in.nextLine();
-            System.out.println("Enter the author");
-            author=in.nextLine();
-            System.out.println("Enter the edition number:");
-            edition=in.nextInt();
-            in.nextLine();
-            arr[i]=new Book(title,author,edition);           
-        }
-        System.out.println("Which authors book do you want to see?");
-        String autho=in.nextLine();
-        for(i=0;i<6;i++)    
-        {
-            if (arr[i].author.equals(autho)){
-                arr[i].display();
-            }
+        Book[] books = new Book[6];
+        books[0] = new Book("Effective Java", "Joshua Bloch", 3);
+        books[1] = new Book("Clean Code", "Robert Martin", 1);
+        books[2] = new Book("Design Patterns", "Erich Gamma", 1);
+        books[3] = new Book("Refactoring", "Martin Fowler", 2);
+        books[4] = new Book("Java Concurrency in Practice", "Brian Goetz", 1);
+        books[5] = new Book("Introduction to Algorithms", "Thomas H. Cormen", 3);
 
-        }  
-        in.close();
+       
+        for (int i = 0; i < books.length - 1; i++) {
+            for (int j = 0; j < books.length - i - 1; j++) {
+                if (books[j].getTitle().compareTo(books[j + 1].getTitle()) > 0) {
+                    // Swap the books
+                    Book temp = books[j];
+                    books[j] = books[j + 1];
+                    books[j + 1] = temp;
+                }
+            }
+        }
+
+      
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the author's name: ");
+        String inputAuthor = scanner.nextLine();
+ 
+        System.out.println("\nBooks by " + inputAuthor + ":");
+        boolean found = false;
+        for (Book book : books) {
+            if (book.getAuthor().equalsIgnoreCase(inputAuthor)) {
+                book.display();
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No books found by the author " + inputAuthor);
+        }
     }
 }
-//ascending order not clear based on which parameter
