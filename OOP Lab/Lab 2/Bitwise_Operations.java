@@ -10,7 +10,7 @@ public class Bitwise_Operations {
         int x_bytwo = num >> 1;
 
         System.out.println("Integer division by two using bitwise: "+x_bytwo);
-        System.out.println("Multiplication by two using bitwise: "+two_x);;
+        System.out.println("Multiplication by two using bitwise: "+two_x);
 
         sc.close();
     }
