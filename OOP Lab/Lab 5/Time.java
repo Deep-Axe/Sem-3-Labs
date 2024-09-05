@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ifimport java.util.Scanner;
 
 public class Time {
     private int hours;
@@ -29,9 +29,6 @@ public class Time {
         int minutes = (totalSeconds % 3600) / 60;
         int seconds = totalSeconds % 60;
 
-        if (hours >= 24) {
-            hours = hours % 24;
-        }
 
         return new Time(hours, minutes, seconds);
     }
