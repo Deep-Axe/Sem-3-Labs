@@ -12,8 +12,5 @@ public class TypeCasting {
         double x2=10.5;	     
         int y2 = (int) x2;  
         System.out.println(y2);	                    
-
-
-
     }
 }
