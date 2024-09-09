@@ -53,7 +53,7 @@ int main() {
     s[strcspn(s, "\n")] = '\0';
 
     if (strchr(s, ' ')) {
-        printf("BLANK SPACE NOT VALID, BREAKING OUT OF PROGRAM\n");
+        printf("BLANK SPACE NOT VALID, EXITING PROGRAM\n");
         return 1;
     }
 
