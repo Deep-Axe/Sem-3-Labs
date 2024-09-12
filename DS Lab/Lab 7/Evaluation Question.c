@@ -72,9 +72,9 @@ int main() {
     }
 
     if (isPalindrome) {
-        printf("%s is a palindrome\n", s);
+        printf("%s is a palindrome.\n", s);
     } else {
-        printf("%s is not a palindrome\n", s);
+        printf("%s is not a palindrome.\n", s);
     }
 
     printLetterFrequency(s);
