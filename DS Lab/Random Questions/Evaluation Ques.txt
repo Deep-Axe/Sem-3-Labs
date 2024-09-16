@@ -1,0 +1,22 @@
+//Evaluation question for some classes found on my PC
+
+I. Write a C program to define a structure Book with data members to store the title, author, and year of publication of a book. Additionally, write the necessary functions to:
+1.	Input book information from the user.
+2.	Display the details of each book.
+3.	Sort the book records by the year of publication.
+All functions should use an array of Book structures as arguments.
+
+II. Write a C program to perform the following:
+
+Create a structure called 'Employee' with members, Emp name, Emp no, Basic Pay and Total Salary. Read the values for data members of 'n' employees in main function and compute Total Salary of each employee in a separate function. Use pointer to structure concept.
+Consider DA as 40% of basic pay, HRA is 15% of basic pay. Total = DA + HRA + basic.
+
+III. Write a C program to define a structure Product with the following data members:
+    product ID (integer)
+    name (string)
+    category (string)
+    price (float)
+    quantity in stock (integer)
+Additionally, write the necessary functions to:     Input product information from the user.    Display the details of each product.     Sort the product records by both category and price in ascending order (first by category, then by price within each category).
+
+All functions should use an array of Product structures as arguments.
