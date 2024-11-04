@@ -55,7 +55,7 @@ int main() {
         root = insert(root, value);
 
         printf("Do you want to insert another value? (y/n): ");
-        scanf(" %c", &choice); ore any whitespace
+        scanf(" %c", &choice);
     } while (choice == 'y' || choice == 'Y');
 
     printf("In-order Traversal of the Binary Tree: ");
